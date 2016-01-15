@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @turno.nombre %>
+</p>
+
+<p>
+  <strong>Asunto:</strong>
+  <%= @turno.asunto %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @turno.descripcion %>
+</p>
+
+<p>
+  <strong>Hora ingreso:</strong>
+  <%= @turno.hora_ingreso %>
+</p>
+
+<p>
+  <strong>Hora atencion:</strong>
+  <%= @turno.hora_atencion %>
+</p>
+
+<p>
+  <strong>Hora finalizacion:</strong>
+  <%= @turno.hora_finalizacion %>
+</p>
+
+<p>
+  <strong>Usuario:</strong>
+  <%= @turno.usuario %>
+</p>
+
+<p>
+  <strong>Comentario:</strong>
+  <%= @turno.comentario %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @turno.estado %>
+</p>
+
+<p>
+  <strong>Agencia:</strong>
+  <%= @turno.agencia %>
+</p>
+
+<%= link_to 'Editar', edit_turno_path(@turno) %> |
+<%= link_to 'Atrás', turnos_path %>

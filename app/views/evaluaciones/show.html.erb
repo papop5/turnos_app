@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Turno:</strong>
+  <%= @evaluacion.turno %>
+</p>
+
+<p>
+  <strong>Pregunta1:</strong>
+  <%= @evaluacion.pregunta1 %>
+</p>
+
+<p>
+  <strong>Resultado1:</strong>
+  <%= @evaluacion.resultado1 %>
+</p>
+
+<p>
+  <strong>Pregunta2:</strong>
+  <%= @evaluacion.pregunta2 %>
+</p>
+
+<p>
+  <strong>Resultado2:</strong>
+  <%= @evaluacion.resultado2 %>
+</p>
+
+<p>
+  <strong>Pregunta3:</strong>
+  <%= @evaluacion.pregunta3 %>
+</p>
+
+<p>
+  <strong>Resultado3:</strong>
+  <%= @evaluacion.resultado3 %>
+</p>
+
+<p>
+  <strong>Pregunta4:</strong>
+  <%= @evaluacion.pregunta4 %>
+</p>
+
+<p>
+  <strong>Resultado4:</strong>
+  <%= @evaluacion.resultado4 %>
+</p>
+
+<p>
+  <strong>Resultado total:</strong>
+  <%= @evaluacion.resultado_total %>
+</p>
+
+<p>
+  <strong>Comentario:</strong>
+  <%= @evaluacion.comentario %>
+</p>
+
+<%= link_to 'Edit', edit_evaluacion_path(@evaluacion) %> |
+<%= link_to 'Back', evaluaciones_path %>

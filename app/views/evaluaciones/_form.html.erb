@@ -1,0 +1,61 @@
+<%= form_for(@evaluacion) do |f| %>
+  <% if @evaluacion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@evaluacion.errors.count, "error") %> prohibited this evaluacion from being saved:</h2>
+
+      <ul>
+      <% @evaluacion.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :turno_id %><br>
+    <%= f.text_field :turno_id %>
+  </div>
+  <div class="field">
+    <%= f.label :pregunta1 %><br>
+    <%= f.text_field :pregunta1 %>
+  </div>
+  <div class="field">
+    <%= f.label :resultado1 %><br>
+    <%= f.number_field :resultado1 %>
+  </div>
+  <div class="field">
+    <%= f.label :pregunta2 %><br>
+    <%= f.text_field :pregunta2 %>
+  </div>
+  <div class="field">
+    <%= f.label :resultado2 %><br>
+    <%= f.number_field :resultado2 %>
+  </div>
+  <div class="field">
+    <%= f.label :pregunta3 %><br>
+    <%= f.text_field :pregunta3 %>
+  </div>
+  <div class="field">
+    <%= f.label :resultado3 %><br>
+    <%= f.number_field :resultado3 %>
+  </div>
+  <div class="field">
+    <%= f.label :pregunta4 %><br>
+    <%= f.text_field :pregunta4 %>
+  </div>
+  <div class="field">
+    <%= f.label :resultado4 %><br>
+    <%= f.number_field :resultado4 %>
+  </div>
+  <div class="field">
+    <%= f.label :resultado_total %><br>
+    <%= f.number_field :resultado_total %>
+  </div>
+  <div class="field">
+    <%= f.label :comentario %><br>
+    <%= f.text_area :comentario %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

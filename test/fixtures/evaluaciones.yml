@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  turno_id: 
+  pregunta1: MyString
+  resultado1: 1
+  pregunta2: MyString
+  resultado2: 1
+  pregunta3: MyString
+  resultado3: 1
+  pregunta4: MyString
+  resultado4: 1
+  resultado_total: 1
+  comentario: MyText
+
+two:
+  turno_id: 
+  pregunta1: MyString
+  resultado1: 1
+  pregunta2: MyString
+  resultado2: 1
+  pregunta3: MyString
+  resultado3: 1
+  pregunta4: MyString
+  resultado4: 1
+  resultado_total: 1
+  comentario: MyText

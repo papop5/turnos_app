@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Usuarios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Correo</th>
+      <th>Login</th>
+      <th>Estado</th>
+      <th>Password digest</th>
+      <th>Agencia</th>
+      <th>Rol</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @usuarios.each do |usuario| %>
+      <tr>
+        <td><%= usuario.nombre %></td>
+        <td><%= usuario.apellido %></td>
+        <td><%= usuario.correo %></td>
+        <td><%= usuario.login %></td>
+        <td><%= usuario.estado %></td>
+        <td><%= usuario.password_digest %></td>
+        <td><%= usuario.agencia %></td>
+        <td><%= usuario.rol %></td>
+        <td><%= link_to 'Mostrar', usuario %></td>
+        <td><%= link_to 'Editar', edit_usuario_path(usuario) %></td>
+        <td><%= link_to 'Eliminar', usuario, method: :delete, data: { confirm: '¿Estás seguro?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nuevo Usuario', new_usuario_path %>
