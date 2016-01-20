@@ -57,7 +57,6 @@ ActiveRecord::Schema.define(version: 20160115171006) do
   end
 
   add_index "turnos", ["agencia_id"], name: "index_turnos_on_agencia_id", using: :btree
-  add_index "turnos", ["usuario_id"], name: "index_turnos_on_usuario_id", using: :btree
 
   create_table "usuarios", force: :cascade do |t|
     t.string   "nombre"
@@ -76,6 +75,5 @@ ActiveRecord::Schema.define(version: 20160115171006) do
 
   add_foreign_key "evaluaciones", "turnos"
   add_foreign_key "turnos", "agencias"
-  add_foreign_key "turnos", "usuarios"
   add_foreign_key "usuarios", "agencias"
 end

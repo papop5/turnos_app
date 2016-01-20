@@ -1,7 +1,7 @@
 <%= form_for(@agencia) do |f| %>
   <% if @agencia.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@agencia.errors.count, "error") %> prohibited this agencia from being saved:</h2>
+      <h2><%= t('errors.template.header', model: 'Agencia', count: @agencia.errors.count)%></h2>
 
       <ul>
       <% @agencia.errors.full_messages.each do |message| %>

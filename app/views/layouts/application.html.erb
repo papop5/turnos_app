@@ -8,7 +8,18 @@
 </head>
 <body>
 
-<%= yield %>
+	<%=link_to 'Agencias', agencias_path%> |
+	<%=link_to 'Turnos', turnos_path%> |
+	<%=link_to 'Evaluaciones', evaluaciones_path%> |
+	<%=link_to 'Usuarios', usuarios_path%>
+	<% if @current_user %>
+	Hola <%= @current_user.nombre%> |
+	<%= link_to 'Salir', sesion_path(0), method: :delete %>
+	<% else %>
+		<%= link_to 'Ingresar', new_sesion_path %>
+	<% end %>
+
+	<%= yield %>
 
 </body>
 </html>

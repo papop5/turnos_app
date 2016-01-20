@@ -1,4 +1,5 @@
 class EvaluacionesController < ApplicationController
+  before_action :authenticate
   before_action :set_evaluacion, only: [:show, :edit, :update, :destroy]
 
   # GET /evaluaciones

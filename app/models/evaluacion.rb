@@ -1,3 +1,3 @@
 class Evaluacion < ActiveRecord::Base
-  belongs_to :turno
+  belongs_to :turno #depende de turno
 end

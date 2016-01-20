@@ -1,4 +1,5 @@
 class AgenciasController < ApplicationController
+  before_action :authenticate
   before_action :set_agencia, only: [:show, :edit, :update, :destroy]
 
   # GET /agencias

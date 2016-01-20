@@ -1,0 +1,13 @@
+<h1>Iniciar Sesión</h1>
+
+<%= flash[:error] %>
+
+<%= form_for :sesion, url: '/sesiones' do |f| %>
+<%= f.label :mail %>
+<%= f.text_field :mail %>
+
+<%= f.label :clave %>
+<%= f.password_field :clave %>
+
+<%= f.submit 'Iniciar sesión' %>
+<% end %>

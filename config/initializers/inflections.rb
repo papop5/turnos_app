@@ -19,4 +19,7 @@ ActiveSupport::Inflector.inflections(:en) do |inflect|
 	   inflect.irregular  'agencia', 'agencias'
 	   inflect.irregular  'turno', 'turnos'
 	   inflect.irregular  'evaluacion', 'evaluaciones'
+	   inflect.irregular  'sesion', 'sesiones'
 	end
+
+	#Agregar las lineas anteriores antes de hacer el scaffold 
