@@ -8,18 +8,32 @@
 </head>
 <body>
 
-	<%=link_to 'Agencias', agencias_path%> |
-	<%=link_to 'Turnos', turnos_path%> |
-	<%=link_to 'Evaluaciones', evaluaciones_path%> |
-	<%=link_to 'Usuarios', usuarios_path%>
-	<% if @current_user %>
-	Hola <%= @current_user.nombre%> |
-	<%= link_to 'Salir', sesion_path(0), method: :delete %>
-	<% else %>
-		<%= link_to 'Ingresar', new_sesion_path %>
-	<% end %>
-
-	<%= yield %>
-
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="/">
+				TurnosApp
+			</a>
+		</div>
+		<ul class= "nav navbar-nav navbar-right">
+			<li><%= link_to 'Agencias', agencias_path%></li>
+			<li><%= link_to 'Turnos', turnos_path%></li>
+			<li><%= link_to 'Evaluaciones', evaluaciones_path%></li>
+			<li><%= link_to 'Usuarios', usuarios_path%></li>
+			<li>
+				<% if @current_user %>
+					<!--Hola <%= @current_user.nombre%>-->
+					<%= link_to 'Salir', sesion_path(0), method: :delete %>
+				<% else %>
+					<%= link_to 'Ingresar', new_sesion_path %>
+				<% end %>
+			</li>
+		</ul>
+	</div>
+</nav>
+			
+	<div class="content">
+		<%= yield %>
+	</div>
 </body>
 </html>
