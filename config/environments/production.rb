@@ -86,5 +86,5 @@ password: '_WVMN515REzI8qF4Wuj85A', #en correo de gmail esta la contraseña
 authentication: 'login',
 host: 'localhost:3000',
 }
-config.action_mailer.default_url_options = {host: 'https://administra-app-rperez.herokuapp.com'}
+config.action_mailer.default_url_options = {host: 'https://turnos-app.herokuapp.com'}
 end
