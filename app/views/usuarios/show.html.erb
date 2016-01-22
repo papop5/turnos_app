@@ -25,14 +25,14 @@
   <%= @usuario.estado %>
 </p>
 
-<p>
+<!--<p>
   <strong>Password digest:</strong>
   <%= @usuario.password_digest %>
-</p>
+</p>-->
 
 <p>
   <strong>Agencia:</strong>
-  <%= @usuario.agencia %>
+  <%= @usuario.agencia.nombre %><!--aqui se agrega .nombre para que muestre el nombre de la agencia/td>-->
 </p>
 
 <p>

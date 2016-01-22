@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Evaluaciones</h1>
+<h4>Evaluaciones</h4>
 
-<table>
+<table class="table table-striped table-condensed table-hover "> 
   <thead>
     <tr>
       <th>Turno</th>
@@ -23,7 +23,7 @@
   <tbody>
     <% @evaluaciones.each do |evaluacion| %>
       <tr>
-        <td><%= evaluacion.turno %></td>
+        <td><%= evaluacion.turno.numero %></td><!--aqui se agrega .numero para que traiga el numero del turno</td>-->
         <td><%= evaluacion.pregunta1 %></td>
         <td><%= evaluacion.resultado1 %></td>
         <td><%= evaluacion.pregunta2 %></td>
@@ -44,4 +44,4 @@
 
 <br>
 
-<%= link_to 'Nueva Evaluacion', new_evaluacion_path %>
+<%= link_to 'Nueva Evaluacion', new_evaluacion_path, class: 'btn btn-primary' %>

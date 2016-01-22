@@ -7,3 +7,11 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
+Usuario.create(
+	nombre: 'Rafael',
+	apellido: 'Perez',
+	correo: 'rperezho@gmail.com',
+	password: '123456',
+	password_confirmation: '123456',
+	login: 'rperez'
+	)

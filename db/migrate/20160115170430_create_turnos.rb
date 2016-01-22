@@ -1,6 +1,7 @@
 class CreateTurnos < ActiveRecord::Migration
   def change
     create_table :turnos do |t|
+      t.string :numero
       t.string :nombre
       t.string :asunto
       t.text :descripcion

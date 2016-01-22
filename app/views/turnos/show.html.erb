@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Numero:</strong>
+  <%= @turno.numero %>
+</p>
+
+<p>
   <strong>Nombre:</strong>
   <%= @turno.nombre %>
 </p>
@@ -32,7 +37,7 @@
 
 <p>
   <strong>Usuario:</strong>
-  <%= @turno.usuario %>
+  <%= @turno.usuario.nombre %>
 </p>
 
 <p>
@@ -47,7 +52,7 @@
 
 <p>
   <strong>Agencia:</strong>
-  <%= @turno.agencia %>
+  <%= @turno.agencia.nombre %><!--aqui se agrega .nombre para que aparezca el nombre de la agencia en mostrar-->
 </p>
 
 <%= link_to 'Editar', edit_turno_path(@turno) %> |

@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Agencias</h1>
+<h4>Agencias</h4>
 
-<table>
+<table class="table table-striped table-condensed table-hover "> 
   <thead>
     <tr>
       <th>Nombre</th>
@@ -26,4 +26,5 @@
 
 <br>
 
-<%= link_to 'Nueva Agencia', new_agencia_path %>
+<%= link_to 'Nueva Agencia', new_agencia_path, class: 'btn btn-primary' %>
+<%= link_to 'Descargar csv', agencias_path(format: :csv), class: 'btn btn-primary'%>

@@ -4,22 +4,31 @@
       <h2><%= t('errors.template.header', model: 'Agencia', count: @agencia.errors.count)%></h2>
 
       <ul>
-      <% @agencia.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% @agencia.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :nombre %><br>
-    <%= f.text_field :nombre %>
+  <div class="row"> 
+
+    <div class="col-md-8 col-sm-6 col-xs-12">
+      <div class="form-group">
+        <%= f.label :nombre %><br>
+        <%= f.text_field :nombre, class: 'form-control' %>
+      </div>
+    </div>
+
+    <div class="col-md-8 col-sm-6 col-xs-12">
+      <div class="form-group">
+        <%= f.label :direccion %><br>
+        <%= f.text_field :direccion, class: 'form-control' %>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :direccion %><br>
-    <%= f.text_field :direccion %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <br/>
+     <div class="form-group">
+      <%= f.submit 'Guardar', class: 'btn btn-primary' %>
+    </div>
 <% end %>

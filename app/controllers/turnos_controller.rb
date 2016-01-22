@@ -6,6 +6,12 @@ class TurnosController < ApplicationController
   # GET /turnos.json
   def index
     @turnos = Turno.all
+
+      respond_to do |format|
+        format.html
+        format.csv { send_data Turno.to_csv }
+        format.json
+      end
   end
 
   # GET /turnos/1
@@ -70,6 +76,6 @@ class TurnosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def turno_params
-      params.require(:turno).permit(:nombre, :asunto, :descripcion, :hora_ingreso, :hora_atencion, :hora_finalizacion, :usuario_id, :comentario, :estado, :agencia_id)
+      params.require(:turno).permit(:numero,:nombre, :asunto, :descripcion, :hora_ingreso, :hora_atencion, :hora_finalizacion, :usuario_id, :comentario, :estado, :agencia_id)
     end
 end
