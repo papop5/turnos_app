@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 20160115171006) do
   add_index "evaluaciones", ["turno_id"], name: "index_evaluaciones_on_turno_id", using: :btree
 
   create_table "turnos", force: :cascade do |t|
+    t.string   "numero"
     t.string   "nombre"
     t.string   "asunto"
     t.text     "descripcion"
@@ -49,9 +50,9 @@ ActiveRecord::Schema.define(version: 20160115171006) do
     t.datetime "hora_atencion"
     t.datetime "hora_finalizacion"
     t.integer  "usuario_id"
-    t.text     "comentario"
     t.integer  "estado"
     t.integer  "agencia_id"
+    t.text     "comentario"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
   end

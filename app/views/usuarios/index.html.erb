@@ -26,7 +26,7 @@
         <td><%= usuario.login %></td>
         <td><%= usuario.estado %></td>
         <!--<td><%= usuario.password_digest %></td>-->
-        <td><%= usuario.agencia %></td><!--aqui se agrega .nombre para que traiga el nombre de la agencia</td>-->
+        <td><%= usuario.agencia.nombre %></td><!--aqui se agrega .nombre para que traiga el nombre de la agencia</td>-->
         <td><%= usuario.rol %></td>
         <td><%= link_to 'Mostrar', usuario %></td>
         <td><%= link_to 'Editar', edit_usuario_path(usuario) %></td>

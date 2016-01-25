@@ -37,12 +37,7 @@
 
 <p>
   <strong>Usuario:</strong>
-  <%= @turno.usuario.nombre %>
-</p>
-
-<p>
-  <strong>Comentario:</strong>
-  <%= @turno.comentario %>
+  <%= @turno.usuario.login %><!--aqui se agrega .login para que aparezca el login del usuario en mostrar-->
 </p>
 
 <p>
@@ -54,6 +49,12 @@
   <strong>Agencia:</strong>
   <%= @turno.agencia.nombre %><!--aqui se agrega .nombre para que aparezca el nombre de la agencia en mostrar-->
 </p>
+
+<p>
+  <strong>Comentario:</strong>
+  <%= @turno.comentario %>
+</p>
+
 
 <%= link_to 'Editar', edit_turno_path(@turno) %> |
 <%= link_to 'Atrás', turnos_path %>

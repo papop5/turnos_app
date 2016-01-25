@@ -65,16 +65,18 @@
     <div class="col-md-4 col-sm-6 col-xs-12">
       <div class="form-group">
         <%= f.label :usuario_id %><br>
-        <%= f.collection_select(:usuario_id, Usuario.all, :id, :nombre, {}, {class: 'form-control'}) %><!--aqui se crea el combo para escoger el usuario funciona sin parentecis-->
+        <%= f.collection_select(:usuario_id, Usuario.all, :id, :login, {}, {class: 'form-control'}) %><!--aqui se crea el combo para escoger el usuario funciona sin parentecis-->
       </div>
     </div>
 
     <div class="col-md-4 col-sm-6 col-xs-12">
       <div class="form-group">
-        <%= f.label :comentario %><br>
-        <%= f.text_area :comentario, class: 'form-control' %>
+        <%= f.label :agencia_id %><br>
+        <%= f.collection_select(:agencia_id, Agencia.all, :id, :nombre, {}, {class: 'form-control'})  %><!--aqui se crea el combo para escoger la agencia funciona sin parentecis-->
       </div>
     </div>
+
+   
 
     <div class="col-md-4 col-sm-6 col-xs-12">
       <div class="form-group">
@@ -85,8 +87,8 @@
 
     <div class="col-md-4 col-sm-6 col-xs-12">
       <div class="form-group">
-        <%= f.label :agencia_id %><br>
-        <%= f.collection_select(:agencia_id, Agencia.all, :id, :nombre, {}, {class: 'form-control'})  %><!--aqui se crea el combo para escoger la agencia funciona sin parentecis-->
+        <%= f.label :comentario %><br>
+        <%= f.text_area :comentario, class: 'form-control' %>
       </div>
     </div>
   </div>

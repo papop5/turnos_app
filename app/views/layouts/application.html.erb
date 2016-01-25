@@ -22,8 +22,8 @@
 			<li><%= link_to 'Usuarios', usuarios_path%></li>
 			<li>
 				<% if @current_user %>
-					<!--Hola <%= @current_user.nombre%>-->
-					<%= link_to 'Salir', sesion_path(0), method: :delete %>
+					<li>Hola <%= @current_user.nombre%></li> <!--Hola <%= @current_user.nombre%>-->
+					<li><%= link_to 'Salir', sesion_path(0), method: :delete %></li>
 				<% else %>
 					<%= link_to 'Ingresar', new_sesion_path %>
 				<% end %>

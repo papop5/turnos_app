@@ -34,6 +34,7 @@ class TurnosController < ApplicationController
     @turno = Turno.new(turno_params)
 
     respond_to do |format|
+
       if @turno.save
         format.html { redirect_to @turno, notice: 'Turno se ha creado correctamente..' }
         format.json { render :show, status: :created, location: @turno }
@@ -76,6 +77,6 @@ class TurnosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def turno_params
-      params.require(:turno).permit(:numero,:nombre, :asunto, :descripcion, :hora_ingreso, :hora_atencion, :hora_finalizacion, :usuario_id, :comentario, :estado, :agencia_id)
+      params.require(:turno).permit(:numero, :nombre, :asunto, :descripcion, :hora_ingreso, :hora_atencion, :hora_finalizacion, :usuario_id, :estado, :agencia_id, :comentario)
     end
 end

@@ -9,9 +9,9 @@ class CreateTurnos < ActiveRecord::Migration
       t.timestamp :hora_atencion
       t.timestamp :hora_finalizacion
       t.references :usuario #index: true, foreign_key: true
-      t.text :comentario
       t.integer :estado
       t.references :agencia, index: true, foreign_key: true
+      t.text :comentario
 
       t.timestamps null: false
     end
