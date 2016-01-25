@@ -20,14 +20,12 @@
 			<li><%= link_to 'Turnos', turnos_path%></li>
 			<li><%= link_to 'Evaluaciones', evaluaciones_path%></li>
 			<li><%= link_to 'Usuarios', usuarios_path%></li>
-			<li>
 				<% if @current_user %>
-					<li>Hola <%= @current_user.nombre%></li> <!--Hola <%= @current_user.nombre%>-->
+					<li><%= link_to 'Hola, ' + @current_user.nombre %></li> <!--Hola <%= @current_user.nombre%>-->
 					<li><%= link_to 'Salir', sesion_path(0), method: :delete %></li>
 				<% else %>
-					<%= link_to 'Ingresar', new_sesion_path %>
+					<li><%= link_to 'Ingresar', new_sesion_path %></li>
 				<% end %>
-			</li>
 		</ul>
 	</div>
 </nav>
