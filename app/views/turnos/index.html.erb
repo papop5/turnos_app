@@ -42,8 +42,10 @@
   </tbody>
 </table>
 
-<br>
+<%= will_paginate @turnos, renderer: BootstrapPagination::Rails, previous_label: 'Anterior', next_label: 'Siguiente' %>
 
+<br>
+<br>
 <%= link_to 'Nuevo Turno', new_turno_path, class: 'btn btn-primary' %>
 
 <%= link_to 'Descargar csv', turnos_path(format: :csv), class: 'btn btn-primary'%>

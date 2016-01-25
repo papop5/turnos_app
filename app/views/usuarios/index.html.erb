@@ -36,6 +36,7 @@
   </tbody>
 </table>
 
+<%= will_paginate @usuarios, renderer: BootstrapPagination::Rails, previous_label: 'Anterior', next_label: 'Siguiente' %>
 <br>
-
+<br>
 <%= link_to 'Nuevo Usuario', new_usuario_path, class: 'btn btn-primary' %>

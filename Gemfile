@@ -32,6 +32,10 @@ gem 'tzinfo-data'
 
  gem 'bootstrap-sass', '~> 3.3.6'
 
+gem 'will_paginate'
+
+gem 'will_paginate-bootstrap'
+
 
 # Use Unicorn as the app server
 # gem 'unicorn'

@@ -5,7 +5,7 @@ class AgenciasController < ApplicationController
   # GET /agencias
   # GET /agencias.json
   def index
-    @agencias = Agencia.all
+    @agencias = Agencia.paginate(page: params[:page], per_page: 2 )
 
       respond_to do |format|
         format.html
@@ -79,3 +79,4 @@ class AgenciasController < ApplicationController
       params.require(:agencia).permit(:nombre, :direccion)
     end
 end
+

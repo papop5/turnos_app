@@ -5,7 +5,7 @@ class TurnosController < ApplicationController
   # GET /turnos
   # GET /turnos.json
   def index
-    @turnos = Turno.all
+    @turnos = Turno.paginate(page: params[:page], per_page: 2 )
 
       respond_to do |format|
         format.html

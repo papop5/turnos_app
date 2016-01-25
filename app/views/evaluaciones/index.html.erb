@@ -42,6 +42,8 @@
   </tbody>
 </table>
 
-<br>
+<%= will_paginate @evaluaciones, renderer: BootstrapPagination::Rails, previous_label: 'Anterior', next_label: 'Siguiente' %>
 
+<br>
+<br>
 <%= link_to 'Nueva Evaluacion', new_evaluacion_path, class: 'btn btn-primary' %>
